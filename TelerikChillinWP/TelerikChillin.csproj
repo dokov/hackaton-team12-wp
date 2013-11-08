@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{303CD698-35C8-4FAE-977E-F38C20F22A9C}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Telerik.Everlive.Sdk.Sample.WindowsPhone</RootNamespace>
+    <AssemblyName>Telerik.Everlive.Sdk.Sample.WindowsPhone</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Telerik.Everlive.Sdk.Sample.WindowsPhone.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Telerik.Everlive.Sdk.Sample.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="Telerik.Everlive.Sdk.WindowsPhone7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppManager.cs" />
+    <Compile Include="ConnectionSettings.cs" />
+    <Compile Include="Converters\ImageSourceToVisibilityConverter.cs" />
+    <Compile Include="Converters\IntToVisibilityConverter.cs" />
+    <Compile Include="Converters\StringToUpperConverter.cs" />
+    <Compile Include="Helpers\NavigationHelper.cs" />
+    <Compile Include="Helpers\UIHelper.cs" />
+    <Compile Include="Model\Activity.cs" />
+    <Compile Include="Model\CafeteriaMenu.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\Place.cs" />
+    <Compile Include="Model\Discount.cs" />
+    <Compile Include="Model\CustomUser.cs" />
+    <Compile Include="Model\GenderEnum.cs" />
+    <Compile Include="Resources\LocalizedStrings.cs" />
+    <Compile Include="Resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UnderConstructionPage.xaml.cs">
+      <DependentUpon>UnderConstructionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PlacesPage.xaml.cs">
+      <DependentUpon>PlacesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CafeteriaPage.xaml.cs">
+      <DependentUpon>CafeteriaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewDiscountPage.xaml.cs">
+      <DependentUpon>ViewDiscountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DiscountCategoryPage.xaml.cs">
+      <DependentUpon>DiscountCategoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DiscountCategoriesMenuPage.xaml.cs">
+      <DependentUpon>DiscountCategoriesMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewModel\DiscountCategoryMenuItem.cs" />
+    <Compile Include="UI\ViewModel\FileItem.cs" />
+    <Compile Include="UI\ViewProfilePage.xaml.cs">
+      <DependentUpon>ViewProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FriendsPage.xaml.cs">
+      <DependentUpon>FriendsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreateOrEditCommentPage.xaml.cs">
+      <DependentUpon>CreateOrEditCommentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreateOrEditActivityPage.xaml.cs">
+      <DependentUpon>CreateOrEditActivityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreateAccountPage.xaml.cs">
+      <DependentUpon>CreateAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ViewModel\MenuItem.cs" />
+    <Compile Include="UI\ViewActivityPage.xaml.cs">
+      <DependentUpon>ViewActivityPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="UI\UnderConstructionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\PlacesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\CafeteriaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ViewDiscountPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\DiscountCategoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\DiscountCategoriesMenuPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ViewProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\FriendsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\CreateOrEditCommentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\CreateOrEditActivityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\CreateAccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ViewActivityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\automotive.png" />
+    <Content Include="Images\Categories\children.png" />
+    <Content Include="Images\Categories\computers.png" />
+    <Content Include="Images\Categories\eating.png" />
+    <Content Include="Images\Categories\entertainment.png" />
+    <Content Include="Images\Categories\finances.png" />
+    <Content Include="Images\Categories\hair.png" />
+    <Content Include="Images\Categories\health.png" />
+    <Content Include="Images\Categories\home.png" />
+    <Content Include="Images\Categories\internet.png" />
+    <Content Include="Images\Categories\jewelry.png" />
+    <Content Include="Images\Categories\optical.png" />
+    <Content Include="Images\Categories\rest.png" />
+    <Content Include="Images\Categories\travel.png" />
+    <Content Include="Images\MainMenu\cafeteria.png" />
+    <Content Include="Images\MainMenu\discounts.png" />
+    <Content Include="Images\MainMenu\lunch.png" />
+    <Content Include="Images\MainMenu\messages.png" />
+    <Content Include="Images\MainMenu\sports.png" />
+    <Content Include="Images\menu_profile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_friends.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_activities.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_logout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_login.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_comment.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_unlike.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_like.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_ok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar_refresh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\Microsoft.Phone.Controls.Toolkit.dll" />
+    <Content Include="Lib\Microsoft.Phone.Controls.Toolkit.xml" />
+    <Content Include="Lib\Newtonsoft.Json.dll" />
+    <Content Include="Lib\Newtonsoft.Json.xml" />
+    <Content Include="Lib\Telerik.Everlive.Sdk.WindowsPhone7.dll" />
+    <Content Include="Lib\Telerik.Everlive.Sdk.WindowsPhone7.XML" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
